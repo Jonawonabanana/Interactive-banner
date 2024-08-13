@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=320, height=480, initial-scale=1.0">
+    <title>Interactive Banner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="banner">
+        <!-- Logo和標語 -->
+        <div class="header">
+            <a href="https://www.performics.com/" target="_blank">
+                <img src="/media/performics_logo_white.svg" alt="Logo" class="logo">
+            </a>
+            <p class="slogan">The Premier Revenue Growth Driver</p>
+        </div>
+        
+        <!-- CUT1 背景圖片＋Logo -->
+        <div class="cut1" id="cut1_layout">
+            <img src="/media/cut1_bg.png" class="cut1bg" alt="Cut1 Bg">
+            <img src="/media/cut1_logo.png" class="cut1logo" alt="Cut1 Logo">
+        </div>
+
+        <!-- Cut1 Video 播放 -->
+        <div class="screen" id="cut1_video">
+            <a href="https://www.performics.com/" target="_blank">
+                <video id="introVideo" muted>
+                    <source src="/media/Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <!-- 影片下方圖片 -->
+                <img src="/media/cut2_carousal1.png" alt="Carousal Image" class="video-below-img">
+            </a>
+            <!-- 音量按鈕 -->
+            <button id="volumeControl" class="volume-button">🔊</button>
+        </div>
+
+
+        <!-- Cut1: 影片結束後顯示Logo -->
+        <div class="screen" id="cut1_logo_end">
+            <img src="/media/cut2_layout.png" alt="Cut1 End" class="layout-img">
+        </div>
+
+        <!-- Cut2: 互動輪播 -->
+        <div class="screen screen2" id="interactiveScreen">
+            <a href="https://www.performics.com/" target="_blank">
+                <div class="cut2_greenlogo">
+                    <img src="/media/cut2_greenlogo.png" alt="Cut2 logo" class="layout-img"></img>
+                </div> 
+            </a>
+           
+            <!-- 互動輪播投影容器 -->
+            <div class="carousel-container" id="carouselContainer">
+                <div class="carousel-item clickable" data-link="https://www.performics.com/our-work/">
+                    <img src="/media/cut2_carousal1.png" alt="Carousal Image 1">
+                </div>
+                <div class="carousel-item clickable" data-link="https://www.performics.com/our-work/">
+                    <img src="/media/cut2_carousal2.png" alt="Carousal Image 2">
+                </div>
+                <div class="carousel-item clickable" data-link="https://www.performics.com/our-work/">
+                    <img src="/media/cut2_carousal3.png" alt="Carousal Image 3">
+                </div>
+            </div>
+       
+            <!-- 漸層和 CTA 按鈕 -->
+            <div class="cta-overlay">
+                <a href="https://www.performics.com/" class="cta-button" target="_blank">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
